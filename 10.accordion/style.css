@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: crimson;
+    font-family: sans-serif;
+}
+
+.accordion {
+    margin: 100px auto;
+    width: 600px;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 10px;
+}
+li label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: dodgerblue;
+    cursor: pointer;
+    font-weight: 500;
+}
+li label>span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    font-weight: 500;
+}
+li label + input[type="radio"] {
+    display: none;
+}
+li .content {
+    padding: 0 10px;
+    line-height: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+li input[type="radio"]:checked + .content {
+    max-height: 400px;
+    overflow-y: auto;
+}
