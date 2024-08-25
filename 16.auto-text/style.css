@@ -1,0 +1,38 @@
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 25px;
+    background-color: #000;
+    color: #fff;
+}
+.language {
+    color: yellow;
+    margin-right: 12px;
+}
+.is {
+    margin-right: 12px;
+    color: blueviolet;
+}
+.cursor {
+    width: 5px;
+    background-color: blue;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
