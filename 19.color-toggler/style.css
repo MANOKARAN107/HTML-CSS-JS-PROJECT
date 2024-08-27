@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark-color: #000;
+    --light-color: #fff;
+    --bg-color: var(--light-color);
+    --toggle-color: var(--dark-color);
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    transition: all 0.5s;
+}
+.toggler {
+    width: 80px;
+    height: 40px;
+    background-color: var(--toggle-color);
+    border-radius: 22px;
+    position: relative;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+}
+.toggle-container input {
+    display: none;
+}
+.toggler::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    transform: translateX(5px);
+    transition: all 0.5s;
+}
+.toggle-container > input:checked + .toggler::before {
+    transform: translateX(45px);
+}
