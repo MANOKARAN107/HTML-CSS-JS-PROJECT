@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8f46ee;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.copy, .move {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.copy button, .move button {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+}
+textarea {
+    height: 70px;
+    width: 200px;
+}
+.separator {
+    height: 100%;
+    border: 2px solid rgb(3, 221, 254);
+}
+.content-copied {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 20px;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0;
+}
+.content-copied p {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.fade-in {
+    opacity: 1;
+    transition: opacity ease-in 0.3s;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity ease-out 0.3s;
+    transition-delay: 0.6s;
+}
