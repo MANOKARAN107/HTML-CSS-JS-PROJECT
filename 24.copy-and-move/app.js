@@ -13,8 +13,8 @@ copyBtn.onclick = function () {
         copiedContent.classList.remove('fade-in');
         copiedContent.classList.remove('fade-out');
     }, 2000);
-    document.execCommand("copy");
     copyTextArea.select();
+    document.execCommand("copy");
 }
 moveBtn.onclick = function() {
     moveTextArea.value = copyTextArea.value;
