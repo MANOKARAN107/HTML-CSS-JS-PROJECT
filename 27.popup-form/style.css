@@ -1,0 +1,125 @@
+:root{
+    --modal-duration: 1s;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1438786657495-640937046d18?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.content-container h1{
+    margin: 20px;
+    color: #fff;
+}
+.content-container p {
+    width: 50rem;
+    color: #fff;
+    margin: 20px;
+}
+.content-container .cta-btn{
+    margin: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-container.show-modal{
+    display: block;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    width: 350px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--modal-duration);
+}
+.modal-container.show-modal > .modal {
+    z-index: 1;
+    opacity: 1;
+}
+.close-btn{
+    font-size: 20px;
+    float: right;
+    border: unset;
+    background-color: #fff;
+    color: #000;
+    border: unset;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.modal-content h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.modal-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.modal-form > div > label {
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.modal-form input {
+    width: 100%;
+    outline: unset;
+    border: 1px solid #000;
+    height: 32px;
+    padding: 8px;
+}
+.modal-form .submit {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+.modal-form .submit button{
+    display: flex;
+    align-self: flex-start;
+    padding: 8px 16px;
+    background-color: crimson;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
