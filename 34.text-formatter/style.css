@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver#000;
+    color: #fff;
+}
+.container {
+    width: 40rem;
+    height: 30rem;
+    background-color: #131212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4px;
+}
+h1 {
+    margin: 3rem;
+    font-size: 37px;
+}
+.input-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 2rem 2rem 2rem;
+}
+.input-container input {
+    height: 40px;
+    width: 100%;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: unset;
+}
+.input-container input:focus {
+    outline: 0;
+    border: unset;
+}
+.formatter-buttons {
+    width: 80%;
+    padding: 0 3rem 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.formatter-buttons button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: blueviolet;
+    border: unset;
+    color: #fff;
+    cursor: pointer;
+}
+.formatter-buttons button[format="underline"] {
+    text-decoration: underline;
+}
+.formatter-buttons button[format="bold"] {
+    font-weight: bold;
+}
+.formatter-buttons button[format="lowercase"] {
+    text-transform: lowercase;
+}
+.formatter-buttons button[format="uppercase"] {
+    text-transform: uppercase;
+}
+.formatter-buttons button[format="capitalize"] {
+    text-transform: capitalize;
+}
+.result-conatiner {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 2rem 2rem 2rem;
+}
+.result-conatiner .result {
+    height: 60px;
+    width: 100%;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: unset;
+    background: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
