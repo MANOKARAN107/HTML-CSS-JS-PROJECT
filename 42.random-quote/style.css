@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.container {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quote-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.quote {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 2rem 0;
+}
+.author {
+    float: right;
+    font-size: 13px;
+}
+.author::before,
+.author::after {
+    content: "-";
+}
+span,
+small {
+    animation: anime 1s ease-out;
+}
+.btn {
+    padding: 8px 16px;
+    background-color: orange;
+    color: #000;
+    cursor: pointer;
+    border: unset;
+    font-weight: 500;
+}
+
+@keyframes anime {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
